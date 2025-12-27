@@ -1,5 +1,5 @@
 ---
 title: "Alerting"
-weight: 1
+weight: 4
 description: "Explore the concepts of alerting in ClickStack."
 ---
