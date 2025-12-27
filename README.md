@@ -5,6 +5,7 @@ This repository acts as a comprehensive knowledge reference designed to support 
 ## Purpose
 
 Use this repository to:
+
 - **Search** for specific ClickHouse topics and configurations instantly.
 - **Navigate** through structured documentation alongside your official training.
 - **Reference** verified notes and architectural insights.
@@ -12,6 +13,7 @@ Use this repository to:
 ## Methodology
 
 This project is built as a **digital garden** utilizing:
+
 - **Hugo**: For a fast, static-site experience.
 - **Hextra Theme**: Providing a modern documentation layout.
 - **Zettelkasten Methodology**: Notes are atomically written and interconnected, fostering a network of understanding rather than just linear information.

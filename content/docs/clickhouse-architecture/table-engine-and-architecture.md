@@ -14,27 +14,27 @@ This note outlines the fundamental architectural hierarchy of ClickHouse and the
 
 **Explanation:**
 
-1.  **Logical Hierarchy:**
-    *   **Databases:** ClickHouse groups tables logically into databases (e.g., `CREATE DATABASE observability;`).
-    *   **Tables:** Inside databases, data is organized into tables.
+1. **Logical Hierarchy:**
+    * **Databases:** ClickHouse groups tables logically into databases (e.g., `CREATE DATABASE observability;`).
+    * **Tables:** Inside databases, data is organized into tables.
 
-2.  **The Role of Table Engines:**
+2. **The Role of Table Engines:**
     Every table must have an engine defined (`ENGINE = ...`). This engine dictates:
-    *   Where the data is stored (Local disk, S3, Memory, etc.).
-    *   How the data is accessed (Column-oriented, external stream).
-    *   Concurrent access rules.
+    * Where the data is stored (Local disk, S3, Memory, etc.).
+    * How the data is accessed (Column-oriented, external stream).
+    * Concurrent access rules.
 
-3.  **Database vs. Query Engine:**
-    *   **As a Database:** Uses the `MergeTree` family. Data is stored on the ClickHouse node's disk (or tiered storage). It provides column-oriented, highly scalable performance.
-    *   **As a Query Engine:** Uses integration engines (e.g., `S3`, `Kafka`, `HDFS`, `PostgreSQL`). ClickHouse processes the query but fetches data from an external source on the fly.
+3. **Database vs. Query Engine:**
+    * **As a Database:** Uses the `MergeTree` family. Data is stored on the ClickHouse node's disk (or tiered storage). It provides column-oriented, highly scalable performance.
+    * **As a Query Engine:** Uses integration engines (e.g., `S3`, `Kafka`, `HDFS`, `PostgreSQL`). ClickHouse processes the query but fetches data from an external source on the fly.
 
-4.  **MergeTree Family:**
+4. **MergeTree Family:**
     `MergeTree` is the default engine for single-node high performance. Variants include:
-    *   `ReplacingMergeTree`: For upsert/deduplication scenarios.
-    *   `AggregatingMergeTree`: For pre-calculated roll-ups.
-    *   `ReplicatedMergeTree`: For high availability (requires ZooKeeper/ClickHouse Keeper).
-    *   `SharedMergeTree`: Used in ClickHouse Cloud.
+    * `ReplacingMergeTree`: For upsert/deduplication scenarios.
+    * `AggregatingMergeTree`: For pre-calculated roll-ups.
+    * `ReplicatedMergeTree`: For high availability (requires ZooKeeper/ClickHouse Keeper).
+    * `SharedMergeTree`: Used in ClickHouse Cloud.
 
 **Reference:**
 
-- Title: [Table Engines in ClickHouse](https://clickhouse.com/docs/en/engines/table-engines)
+* Title: [Table Engines in ClickHouse](https://clickhouse.com/docs/en/engines/table-engines)

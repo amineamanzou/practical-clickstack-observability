@@ -14,21 +14,21 @@ This note explains the physical storage mechanism of ClickHouse, focusing on imm
 
 **Explanation:**
 
-1.  **The Insert Process:**
-    *   Each `INSERT` statement creates a new **Data Part**.
-    *   A Data Part is physically a folder on the disk containing data and metadata.
-    *   Columns are stored in separate, **immutable** files within that folder.
-    *   Initially, data is not necessarily sorted or indexed across the whole table, only within that specific part.
+1. **The Insert Process:**
+    * Each `INSERT` statement creates a new **Data Part**.
+    * A Data Part is physically a folder on the disk containing data and metadata.
+    * Columns are stored in separate, **immutable** files within that folder.
+    * Initially, data is not necessarily sorted or indexed across the whole table, only within that specific part.
 
-2.  **The Merge Process:**
-    *   Because opening thousands of files is slow, ClickHouse runs background **Merges**.
-    *   Merges consolidate overlapping parts into larger, more efficient parts.
-    *   **Resource Cost:** Merging consumes CPU (decompression/recompression), Memory (loading parts), and Disk I/O (reading/writing).
+2. **The Merge Process:**
+    * Because opening thousands of files is slow, ClickHouse runs background **Merges**.
+    * Merges consolidate overlapping parts into larger, more efficient parts.
+    * **Resource Cost:** Merging consumes CPU (decompression/recompression), Memory (loading parts), and Disk I/O (reading/writing).
 
-3.  **Performance Implication:**
-    *   **Small Inserts:** Sending 1 event per insert creates 1 part folder per event. This leads to thousands of parts, forcing the server to merge aggressively, potentially stalling ingestion ("Too many parts" error).
-    *   **Ideal Scenario:** Large batches (e.g., 100k rows) create fewer, larger parts, reducing merge overhead.
+3. **Performance Implication:**
+    * **Small Inserts:** Sending 1 event per insert creates 1 part folder per event. This leads to thousands of parts, forcing the server to merge aggressively, potentially stalling ingestion ("Too many parts" error).
+    * **Ideal Scenario:** Large batches (e.g., 100k rows) create fewer, larger parts, reducing merge overhead.
 
 **Reference:**
 
-- Title: [MergeTree Data Storage](https://clickhouse.com/docs/en/engines/table-engines/mergetree-family/mergetree)
+* Title: [MergeTree Data Storage](https://clickhouse.com/docs/en/engines/table-engines/mergetree-family/mergetree)
