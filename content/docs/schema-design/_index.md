@@ -20,4 +20,7 @@ This section covers the concepts of schema design in ClickHouse, including data 
   {{% card title="Column-Level Expiration" description="Techniques for deleting specific columns from a row while preserving the rest of the record." link="column-level-expiration" icon="book-open" %}}
   {{% card title="Monitoring Storage Efficiency" description="How to inspect disk usage and compression ratios at the column level." link="monitoring-storage-efficiency" icon="book-open" %}}
   {{% card title="Materialized Columns" description="Using materialized columns to simplify syntax and optimize access for nested data structures in ClickHouse." link="materialized-columns" icon="book-open" %}}
+  {{% card title="LZ4 vs ZSTD Codecs" description="Understanding the trade-offs between LZ4 and ZSTD codecs in ClickHouse." link="lz4-vs-zstd-codecs" icon="book-open" %}}
+  {{% card title="TTL Configuration Levels" description="Configuring granular retention policies for tables and specific columns to optimize storage in ClickHouse." link="ttl_configuration-levles" icon="book-open" %}}
+  {{% card title="IP Trie Dictionaries" description="Using IP Trie dictionaries for low-latency IP address lookups and geolocation." link="ip-trie-dictionaries" icon="book-open" %}}{{% card title="LowCardinality Data Type" description="Optimizing storage and performance for string columns with few unique values." link="low-cardinality-data-type" icon="book-open" %}}
 {{% /cards %}}
