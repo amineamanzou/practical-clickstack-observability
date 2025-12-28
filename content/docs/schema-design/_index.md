@@ -19,4 +19,5 @@ This section covers the concepts of schema design in ClickHouse, including data 
   {{% card title="Operational TTL Management" description="How to manage, tune, and force the application of Time-To-Live policies on existing data." link="operational-ttl-management" icon="book-open" %}}
   {{% card title="Column-Level Expiration" description="Techniques for deleting specific columns from a row while preserving the rest of the record." link="column-level-expiration" icon="book-open" %}}
   {{% card title="Monitoring Storage Efficiency" description="How to inspect disk usage and compression ratios at the column level." link="monitoring-storage-efficiency" icon="book-open" %}}
+  {{% card title="Materialized Columns" description="Using materialized columns to simplify syntax and optimize access for nested data structures in ClickHouse." link="materialized-columns" icon="book-open" %}}
 {{% /cards %}}

@@ -19,4 +19,6 @@ This section covers the core concepts of ClickHouse Architecture, including part
   {{% card title="ClickStack Observability Architecture" description="The architectural pattern of using ClickHouse with OpenTelemetry for logs and traces." link="clickstack-observability-architecture" icon="book-open" %}}
   {{% card title="Secondary Indexing Strategies" description="Architectural patterns for optimizing queries that do not match the Primary Key." link="secondary-indexing-strategies" icon="book-open" %}}
   {{% card title="Ingestion Risks: Partitioning vs. Batching" description="Understanding how granular partitioning can negate the benefits of batching during ingestion." link="ingestion-mechanics" icon="book-open" %}}
+  {{% card title="MergeTree Data Part Structure" description="Detailed analysis of how ClickHouse persists data into immutable parts, the internal file structure of Wide vs. Compact parts, and the role of the primary key index." link="mergetree-data-part" icon="book-open" %}}
+  {{% card title="Partitioning Logic: High Cardinality Risks" description="Evaluation of partitioning keys, the distinction between Primary Keys and Partition Keys, and the catastrophic performance impact of high-cardinality partitioning (e.g., Timestamp)." link="partitioning-logic-cadinality" icon="book-open" %}}
 {{% /cards %}}

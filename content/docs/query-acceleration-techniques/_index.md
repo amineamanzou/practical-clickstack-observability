@@ -17,4 +17,7 @@ This section covers the techniques for accelerating query performance in ClickHo
   {{% card title="Dynamic Filtering in Materialized Views" description="Using subqueries and dictionary lookups within a Materialized View to filter data based on external lists." link="dynamic-filtering-lookups" icon="book-open" %}}
   {{% card title="Optimization: SimpleAggregateFunction" description="A specialized data type for optimizing storage and query simplicity for aggregations like Sum, Max, and Min." link="optimization-simpleaggregatefunction" icon="book-open" %}}
   {{% card title="Mechanics of Query Acceleration" description="Understanding the physical reason why AggregatingMergeTree provides exponential performance gains." link="mechanics-query-acceleration" icon="book-open" %}}
+  {{% card title="Atomic Schema Migration" description="A strategy for modifying immutable table properties (like Primary Keys) using Atomic Exchange." link="atomic-schema-migration" icon="book-open" %}}
+  {{% card title="Inspection Table Schema" description="How to retrieve reproducible SQL DDL statements for existing ClickHouse tables." link="inspect-table-schemas" icon="book-open" %}}
+  {{% card title="Unified Views & ClickStack configuration" description="Using the Merge engine and Application settings to query across historical and active tables." link="unified-view-clickstack-config" icon="book-open" %}}
 {{% /cards %}}
