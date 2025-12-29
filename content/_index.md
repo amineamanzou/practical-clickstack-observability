@@ -31,8 +31,8 @@ The Zettelkasten approach allows you to explore this documentation non-linearly,
 Let's begin our observability journey with ClickStack!
 
 {{< cards >}}
-  {{< card link="docs/clickhouse-architecture/" title="ClickHouse Architecture" icon="ic:baseline-architecture" subtitle="The foundation of ClickStack Architecture." >}}
-  {{< card link="docs/schema-design/" title="Schema Design" icon="ic:outline-design-services" subtitle="Explore the concepts of schema design in ClickHouse, including the use of AggregateFunction and SimpleAggregateFunction." >}}
-  {{< card link="docs/query-acceleration-techniques/" title="Query Acceleration Techniques" icon="ic:baseline-speed" subtitle="Explore the techniques for accelerating query performance in ClickHouse, including AggregatingMergeTree, Materialized Views, and Dynamic Filtering." >}}
-  {{< card link="docs/alerting/" title="Alerting" icon="ic:outline-add-alert" subtitle="Explore the concepts of alerting in ClickStack." >}}
+  {{< card link="docs/clickhouse-architecture/" title="ClickHouse Architecture" icon="database" subtitle="The foundation of ClickStack Architecture." >}}
+  {{< card link="docs/schema-design/" title="Schema Design" icon="pencil" subtitle="Explore the concepts of schema design in ClickHouse, including the use of AggregateFunction and SimpleAggregateFunction." >}}
+  {{< card link="docs/query-acceleration-techniques/" title="Query Acceleration Techniques" icon="lightning-bolt" subtitle="Explore the techniques for accelerating query performance in ClickHouse, including AggregatingMergeTree, Materialized Views, and Dynamic Filtering." >}}
+  {{< card link="docs/alerting/" title="Alerting" icon="bell" subtitle="Explore the concepts of alerting in ClickStack." >}}
 {{< /cards >}}
