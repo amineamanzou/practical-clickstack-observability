@@ -6,4 +6,16 @@ description: "Lerning more about the domains covered by the ClickStack certifica
 
 ## 1. ClickHouse Architecture
 
-The foundation of ClickStack observability is ClickHouse. This domain is covering:
+This section covers the core concepts of ClickHouse Architecture, including partitioning, parts, granules, ingestion mechanics, and background merges.
+
+## 2. Schema Design
+
+This section covers the concepts of schema design in ClickHouse, including data types, compression, ETL transformations, and data lifecycle management.
+
+## 3. Query Acceleration Techniques
+
+This section covers the techniques for accelerating query performance in ClickHouse, including AggregatingMergeTree, Materialized Views, and Dynamic Filtering.
+
+## 4. Alerting
+
+This section covers the concepts of alerting in ClickStack, including the use of Webhooks, Saved Searches, and Charts.
