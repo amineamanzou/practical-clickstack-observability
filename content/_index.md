@@ -32,4 +32,7 @@ Let's begin our observability journey with ClickStack!
 
 {{< cards >}}
   {{< card link="docs/clickhouse-architecture/" title="ClickHouse Architecture" icon="document-text" subtitle="The foundation of ClickStack Architecture." >}}
+  {{< card link="docs/schema-design/" title="Schema Design" icon="document-text" subtitle="Explore the concepts of schema design in ClickHouse, including the use of AggregateFunction and SimpleAggregateFunction." >}}
+  {{< card link="docs/query-acceleration-techniques/" title="Query Acceleration Techniques" icon="document-text" subtitle="Explore the techniques for accelerating query performance in ClickHouse, including AggregatingMergeTree, Materialized Views, and Dynamic Filtering." >}}
+  {{< card link="docs/alerting/" title="Alerting" icon="document-text" subtitle="Explore the concepts of alerting in ClickStack." >}}
 {{< /cards >}}
